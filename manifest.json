@@ -1,0 +1,26 @@
+{
+    "name": "Amazon Auto input",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Amazon自動入力ツールのサンプルです",
+    "permissions": ["tabs"],
+    "browser_action" : {
+      "default_icon": {
+          "32": "icon32.png"
+        },
+      "default_title": "Amazon Auto input"
+    },
+    "icons": {
+      "32": "icon32.png"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": [ "https://www.amazon.co.jp/*" ],
+        "js": [ "content.js", "jquery-3.5.1.min.js" ]
+      }
+    ]
+  }
