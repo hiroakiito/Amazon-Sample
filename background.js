@@ -1,15 +1,15 @@
 // 自動入力する項目と値を設定   
-var asinCode = "B01AFS9Q38/";                   //(任意)ASIN(Amazon商品ページのコード)  
-var params = { command: 'inputAddress',          //※処理に使う値の為固定
-               countryCode: "JP",                //(任意)国/地域 ※日本の場合固定
-               userName: "甘存 太郎",             //(必須)氏名 
-               postalCodeTop: "153",             //(必須)郵便番号上3桁
-               postalCodeUnder: "0064",          //(必須)郵便番号下4桁
-               region: "東京都",                  //(必須)都道府県
-               addrress1: "目黒区下目黒",         //(必須)住所1
-               addrress2: "1丁目8番1号",          //(任意)住所2
-               addrress3: "Amazon.co.jp",        //(任意)会社名
-               tell: "01234567890" };             //(必須)電話番号
+const asinCode = "B01AFS9Q38/";                    //(任意)ASIN(Amazon商品ページのコード)  
+const params = { command: 'inputAddress',          //※処理に使う値の為固定
+                 countryCode: "JP",                //(任意)国/地域 ※日本の場合固定
+                 userName: "甘存 太郎",             //(必須)氏名 
+                 postalCodeTop: "153",             //(必須)郵便番号上3桁
+                 postalCodeUnder: "0064",          //(必須)郵便番号下4桁
+                 region: "東京都",                 //(必須)都道府県
+                 addrress1: "目黒区下目黒",         //(必須)住所1
+                 addrress2: "1丁目8番1号",          //(任意)住所2
+                 addrress3: "Amazon.co.jp",        //(任意)会社名
+                 tell: "01234567890" };            //(必須)電話番号
 
 // 拡張機能アイコンクリック時に新規タブでAmazonサイトを開く初期処理
 chrome.browserAction.onClicked.addListener(function(activeTab){
